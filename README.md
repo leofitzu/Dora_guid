@@ -21,7 +21,7 @@ $$dX_t = f(X_t,t) dt + g(X_t,t) dW_t, X_0 \sim p_0,$$
 
 (b) **去噪过程**，由前向SDE的时间反转在轻微正则化条件下建模，也称为反向SDE：
 
-$$dX_t = \left[f(X_t,t) - g^2(X_t,t)\nabla \log p(X_t,t)\right] dt + g(X_t,t) dW_t, \quad X_1 \sim \mathcal{N}(0,I_d). \tag{1}$$
+$$dX_t = [f(X_t,t) - g^2(X_t,t)\nabla \log p(X_t,t)] dt + g(X_t,t) dW_t, \quad X_1 \sim \mathcal{N}(0,I_d). \tag{1}$$
 
 这里，$W = (W_t)_{t\geq0}$ 是在滤波概率空间 $(\Omega, \mathcal{F}, (\mathcal{F}_t)_{t\geq0}, \mathcal{P})$ 上的标准布朗运动，$p(\cdot,t)$ 表示 $p$ 在时间 $t$ 的边缘密度，$\nabla \log p_t(\cdot)$ 为相应的得分函数。$f(X_t,t)$ 和 $g(X_t,t)$ 分别称为漂移项和波动率。$f(X_t,t) = -X_t$ 和 $g(X_t,t) = \sqrt{2}$ 是一个流行的选择，对应于著名的前向Ornstein-Uhlenbeck (OU)过程。
 
