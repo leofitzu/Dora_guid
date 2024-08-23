@@ -20,6 +20,11 @@
 $$dX_t = f(X_t,t) dt + g(X_t,t) dW_t, X_0 \sim p_0,$$
 
 (b) **去噪过程**，由前向SDE的时间反转在轻微正则化条件下建模，也称为反向SDE：
+<table>
+  <tr>
+    <td><img src="./misc/1.png" alt=" ">
+  </tr>
+</table>
 
 $$dX_t = [f(X_t,t) - g^2(X_t,t)\nabla \log p(X_t,t)] dt + g(X_t,t) dW_t, \quad X_1 \sim \mathcal{N}(0,I_d). \tag{1}$$
 
